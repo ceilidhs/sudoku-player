@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Sudoku</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="450" height="450" style="border:3px solid black;">
+    </canvas>
+
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+        // Draw sudoku board
+        ctx.beginPath();
+        ctx.moveTo(50, 0);
+        ctx.lineTo(50, 450);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(100, 0);
+        ctx.lineTo(100, 450);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(150, 0);
+        ctx.lineTo(150, 450);
+        ctx.lineWidth = 3;
+        ctx.stroke();
+        
+        ctx.beginPath();
+        ctx.moveTo(200, 0);
+        ctx.lineTo(200, 450);
+        ctx.lineWidth = 1;
+        ctx.stroke();
+        
+        ctx.beginPath();
+        ctx.moveTo(250, 0);
+        ctx.lineTo(250, 450);
+        ctx.stroke();
+        
+        ctx.beginPath();
+        ctx.moveTo(300, 0);
+        ctx.lineTo(300, 450);
+        ctx.lineWidth = 3;
+        ctx.stroke();
+            
+        ctx.beginPath();
+        ctx.moveTo(350, 0);
+        ctx.lineTo(350, 450);
+        ctx.lineWidth = 1;
+        ctx.stroke();
+            
+        ctx.beginPath();
+        ctx.moveTo(400, 0);
+        ctx.lineTo(400, 450);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(0, 50);
+        ctx.lineTo(450, 50);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(0, 100);
+        ctx.lineTo(450, 100);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(0, 150);
+        ctx.lineTo(450, 150);
+        ctx.lineWidth = 3;
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(0, 200);
+        ctx.lineTo(450, 200);
+        ctx.lineWidth = 1;
+        ctx.stroke();
+        
+        ctx.beginPath();
+        ctx.moveTo(0, 250);
+        ctx.lineTo(450, 250);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(0, 300);
+        ctx.lineTo(450, 300);
+        ctx.lineWidth = 3;
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(0, 350);
+        ctx.lineTo(450, 350);
+        ctx.lineWidth = 1;
+        ctx.stroke();
+        
+        ctx.beginPath();
+        ctx.moveTo(0, 400);
+        ctx.lineTo(450, 400);
+        ctx.stroke();
+
+        ctx.font = "50px Arial"
+        let across = [10, 60, 110, 160, 210, 260, 310, 360, 410]
+        let down = [42.5, 92.5, 142.5, 192.5, 242.5, 292.5, 342.5, 392.5, 442.5]
+
+        // one hard-coded visible sudoku puzzle
+        ctx.fillText("8", across[5], down[0])
+        ctx.fillText("3", across[7], down[0])
+        ctx.fillText("6", across[8], down[0])
+        ctx.fillText("5", across[0], down[1])
+        ctx.fillText("4", across[5], down[1])
+        ctx.fillText("8", across[2], down[2])
+        ctx.fillText("2", across[3], down[2])
+        ctx.fillText("1", across[8], down[2])
+        ctx.fillText("3", across[1], down[3])
+        ctx.fillText("5", across[8], down[3])
+        ctx.fillText("5", across[1], down[4])
+        ctx.fillText("1", across[2], down[4])
+        ctx.fillText("7", across[6], down[4])
+        ctx.fillText("1", across[3], down[5])
+        ctx.fillText("8", across[4], down[5])
+        ctx.fillText("9", across[6], down[5])
+        ctx.fillText("6", across[5], down[6])
+        ctx.fillText("7", across[6], down[6])
+        ctx.fillText("1", across[0], down[7])
+        ctx.fillText("7", across[1], down[7])
+        ctx.fillText("6", across[4], down[7])
+        ctx.fillText("8", across[7], down[7])
+        ctx.fillText("6", across[0], down[8])
+        ctx.fillText("5", across[3], down[8])
+        ctx.fillText("4", across[4], down[8])
+
+    </script>
+
+</body>
+</html>
